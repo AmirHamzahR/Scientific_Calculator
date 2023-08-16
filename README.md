@@ -3,24 +3,27 @@ Created a scientific calculator using C in VHDL incorporated with Xilinx Artix-7
 
 ## Setup and Launch
 
-1. **Setup Vivado**:
+1. Install the GitHub folder by using git clone command in the git command line
+> git clone https://github.com/AmirHamzahR/Scientific_Calculator.git
+
+2. **Setup Vivado**:
    - Launch Vivado and open the **es3_hw_assignment_1** project.
      
-2. **Export Hardware**:
+3. **Export Hardware**:
    - Click on **File**, navigate to **Export** > **Export Hardware**, and then select the **include bitstream** option.
 
-3. **Launch the SDK**:
+4. **Launch the SDK**:
    - Click on **File** and choose **Launch SDK**.
 
-4. **Connect the FPGA Board**:
+5. **Connect the FPGA Board**:
    - Connect the FPGA board to your computer using the USB port.
    - Ensure the power switch on the board is turned on.
 
-5. **Program the FPGA**:
+6. **Program the FPGA**:
    - In the Xilinx SDK, click on **Xilinx Tools**.
    - Navigate to **Program FPGA** and click **Program**.
 
-6. **Run the Program**:
+7. **Run the Program**:
    - Click on the arrow button located next to the play button.
    - Choose and run the **ScCalculator** program.
 
