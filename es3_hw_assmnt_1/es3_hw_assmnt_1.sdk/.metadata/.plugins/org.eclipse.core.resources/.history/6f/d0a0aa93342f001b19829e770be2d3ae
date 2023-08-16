@@ -1,0 +1,48 @@
+#ifndef OPERATIONS_H_
+#define OPERATIONS_H_
+
+/* INCLUSION OF HEADER FILES WHICH CONTAIN C DECLARATIONS AND MACRO DEFINITIONS */
+
+#include <math.h>
+#include <stdio.h>
+#include "xil_types.h"
+
+/* ---------------------------------------------------------------------------- */
+
+
+/* -------------------------FUNCTION DECLARATION------------------------------- */
+
+//declaration for arithmetic operations
+void adder(s32, s32);
+void subtractor(s32, s32);
+void multiplicator(s32, s32);
+void divider(s32, s32);
+
+void displayNumber(s16 a, u16 b);
+void calculation(u16, s32, s32);
+void repeated_op();
+u16 number_switch(s32 , s32 );
+u16 Gpios(s16 , u8 , u8 , u8 BTNR, u8 BTNU);
+
+
+void calculation(u16, s32, s32);
+
+void displayNumber(s16 ,u16 );
+
+//declaration for variables
+
+s8 num1 = 0; 			// s8 for num1 because the num1 takes the value from last 8 bit of the 16 bit input
+s16 num2 = 0;
+s16 output;				// the output of the arithmetic operations
+s16 calc_num;
+u8 BTNU = 0;			// button up
+u8 BTND = 0;			// button down
+u8 BTNL = 0;			// button left
+u8 BTNR = 0;			// button right
+s16 slideSwitchIn = 0;	// the switches of the inputs
+s32 result = 0;
+u16 decide;	/*	This is a variable used to check which type of number is displayed	*/
+
+/* ---------------------------------------------------------------------------- */
+
+#endif /* OPERATIONS_H_ */

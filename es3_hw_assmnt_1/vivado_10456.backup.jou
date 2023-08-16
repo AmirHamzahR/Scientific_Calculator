@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sat Oct 31 17:12:25 2020
+# Process ID: 21052
+# Log file: F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/vivado.log
+# Journal file: F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.xpr
+file copy -force F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.runs/impl_1/top.sysdef F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf
+
+launch_sdk -workspace F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf
+open_project F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assignment1/Assessment1/es3_hw_assmnt_1/es3_hw_assmnt_1.xpr
+launch_sdk -workspace F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assignment1/Assessment1/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assignment1/Assessment1/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf
+launch_sdk -workspace F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assignment1/Assessment1/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assignment1/Assessment1/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf
+file copy -force F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.runs/impl_1/top.sysdef F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assignment1/Assessment1/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf
+
+launch_sdk -workspace F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assignment1/Assessment1/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assignment1/Assessment1/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf
+current_project es3_hw_assmnt_1
+close_project

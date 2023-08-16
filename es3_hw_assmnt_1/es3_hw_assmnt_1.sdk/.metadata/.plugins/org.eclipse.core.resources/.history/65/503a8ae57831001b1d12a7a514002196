@@ -1,0 +1,39 @@
+#ifndef CALCULATIONS_H_
+#define CALCULATIONS_H_
+
+/* INCLUSION OF HEADER FILES WHICH CONTAIN C DECLARATIONS AND MACRO DEFINITIONS */
+
+#include <math.h>
+#include <stdio.h>
+#include "xil_types.h"
+#include <complex.h>
+
+
+//function declaration for real number calculations
+void adder(double *, double complex *, s32 , s32, u16 *, u16 *, u16 * );
+void subtractor(double *, double complex *, s32 , s32, u16 *, u16 *, u16 * );
+void multiplicator(double *, double complex *, s32 , s32 );
+void divider(double *, double complex *, s32 , s32, u16 *, u16 *, u16 *);
+void inv_subtractor(double *, double complex *, s32 , s32 );
+void inv_divider(double *, double complex *, s32 , s32, u16 *);
+
+//function declaration for imaginary number calculations
+void im_adder(double *, s32 );
+void im_subtractor(double *, s32 );
+void im_multiplicator(double *, s32 );
+void im_divider(double *,s32 ,u16 *);
+
+//Other function declarations
+void displayNumber(s16 a, u16 b);
+void calculation(u16 ,double *,double complex *,s32 ,s32 , u16 *,u16 *,u16 *);
+void general_input(double , double );
+
+void displayNumber(s16 ,u16 );
+
+//declaration for variables
+s32 answer = 0;
+u16 decide = 0;	/*	This is a variable used to check which type of number is displayed	*/
+
+/* ---------------------------------------------------------------------------- */
+
+#endif /* OPERATIONS_H_ */

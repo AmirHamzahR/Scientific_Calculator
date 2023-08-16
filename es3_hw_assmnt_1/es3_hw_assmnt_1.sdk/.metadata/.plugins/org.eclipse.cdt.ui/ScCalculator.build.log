@@ -1,0 +1,6 @@
+04:48:10 **** Incremental Build of configuration Debug for project ScCalculator ****
+make all 
+make: Nothing to be done for `all'.
+
+04:48:10 Build Finished (took 224ms)
+

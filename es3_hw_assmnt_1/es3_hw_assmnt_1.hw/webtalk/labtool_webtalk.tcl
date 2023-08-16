@@ -1,0 +1,27 @@
+webtalk_init -webtalk_dir F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.hw/webtalk/
+webtalk_register_client -client project
+webtalk_add_data -client project -key date_generated -value "Fri Nov 27 01:49:51 2020" -context "software_version_and_target_device"
+webtalk_add_data -client project -key product_version -value "Vivado v2015.2 (64-bit)" -context "software_version_and_target_device"
+webtalk_add_data -client project -key build_version -value "1266856" -context "software_version_and_target_device"
+webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
+webtalk_add_data -client project -key registration_id -value "212037177_0_0_969" -context "software_version_and_target_device"
+webtalk_add_data -client project -key tool_flow -value "labtool" -context "software_version_and_target_device"
+webtalk_add_data -client project -key beta -value "FALSE" -context "software_version_and_target_device"
+webtalk_add_data -client project -key route_design -value "FALSE" -context "software_version_and_target_device"
+webtalk_add_data -client project -key target_family -value "not_applicable" -context "software_version_and_target_device"
+webtalk_add_data -client project -key target_device -value "not_applicable" -context "software_version_and_target_device"
+webtalk_add_data -client project -key target_package -value "not_applicable" -context "software_version_and_target_device"
+webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
+webtalk_add_data -client project -key random_id -value "55c1513c-ad67-49c6-888f-5c4439e418c9" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_id -value "ddc787a2-045f-400d-b663-dd3f9a23561f" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "4" -context "software_version_and_target_device"
+webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
+webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
+webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz" -context "user_environment"
+webtalk_add_data -client project -key cpu_speed -value "2592 MHz" -context "user_environment"
+webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
+webtalk_add_data -client project -key system_ram -value "25.000 GB" -context "user_environment"
+webtalk_register_client -client labtool
+webtalk_add_data -client labtool -key pgmcnt -value "00:00:00" -context "labtool\\usage"
+webtalk_transmit -clientid 2614952305 -regid "212037177_0_0_969" -xml F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.hw/webtalk/usage_statistics_ext_labtool.xml -html F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.hw/webtalk/usage_statistics_ext_labtool.html -wdm F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
+webtalk_terminate

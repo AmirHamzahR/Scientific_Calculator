@@ -1,0 +1,499 @@
+/*
+	Author : s1945267		File : main.c
+*/
+#include <stdio.h>
+#include "platform.h"
+#include "xil_types.h"		// Added for integer type definitions
+#include "seg7_display.h"	// Added for 7-segment definitions
+#include "gpio_init.h"		// Added for GPio initializations and operations
+#include <math.h>
+#include <complex.h>
+
+#define TIMER 100 			/*  The timer which sets how fast the value of real and imaginary numbers should be displayed */
+
+/*											declaration for variables											*/
+//inputs
+s16 num1 = 0;					// The input for imaginary numbers
+s16 num2 = 0;					// The input for real numbers
+s16 switch1 = 0;				// The input for first switch of operation selection
+s16 switch2 = 0;				// The input for second switch of operation selection
+s16 switch3 = 0;				// The input for third switch of operation selection
+s16 switch4 = 0;				// The input for fourth switch of operation selection
+u8 BTNU = 0;					// button up
+u8 BTND = 0;					// button down
+u8 BTNL = 0;					// button left
+u8 BTNR = 0;					// button right
+s16 slideSwitchIn = 0;			// the switches of the inputs
+
+u16 counter = 0;				// The counter to be used for how long to display the number
+
+//variables used to detect decimals
+u16 decide, decideI, decideR;	// To detect decimal numbers
+u16 deci_R = 0;					// To detect decimal for real numbers
+u16 deci_I = 0;					// To detect decimal for imaginary numbers
+
+//variable for complex calculations
+double complex z = 0;			// Output for complex numbers (includes real numbers)
+double a = 0;					// real number of output
+double b = 0;					// imaginary number of output
+s16 calc_num;					// operation selection
+u16 display_num;				// the range of loop when displaying number using interrupt service
+
+
+
+//declaration for functions
+/* This is the function used for calculation, calling calculated from calculations.c and calling num1 and num2
+   to be input in the calculation.c function to operate complex number operations.*/
+void calculation(u16, double complex *, s32, s32,  u16 *, u16 *);
+/*	The function to display the numbers */
+void displayNumber(s16 ,u16 );
+
+int main()
+{
+	init_platform();
+	int status;
+
+    // Initialize the GPIOs
+    status = initGpio();
+	if (status != XST_SUCCESS) {
+		print("GPIOs initialization failed!\n\r");
+		cleanup_platform();
+		return 0;
+	}
+	else{
+		print("GPIOs successfully initialized!\n\r");	// prints out if the GPIOS are initialized
+	}
+
+	// Setup the Interrupt System
+	status = setUpInterruptSystem();
+	if (status != XST_SUCCESS) {
+		print("Interrupt system setup failed!\n\r");
+		cleanup_platform();
+		return 0;
+	}
+	else{
+		print("Interrupt system successful!\n\r");		// prints out if the Interrupt system is initialized
+	}
+
+	while (1)
+	{
+
+		slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1); /*	Reads in the value from the slide switches	*/
+
+		BTND = XGpio_DiscreteRead(&P_BTN_DOWN, 1); 				/*	Reads in the value for button down	*/
+
+		BTNL = XGpio_DiscreteRead(&P_BTN_LEFT, 1); 				/*	Reads in the value for button left	*/
+
+		BTNR = XGpio_DiscreteRead(&P_BTN_RIGHT, 1);				/*	Reads in the value for button right	*/
+
+		BTNU = XGpio_DiscreteRead(&P_BTN_UP, 1);   				/*	Reads in the value for button up	*/
+
+		// To shift six bits into num1 which would then be shifted on the 7th to 13th bit for num2
+
+		u16 shiftI = 0;
+		num1 = slideSwitchIn & 0x003F;
+		shiftI = num1 & 0x0020;
+		shiftI = shiftI >> 5;
+		if(shiftI == 1)
+			num1 = num1 | 0xFFC0;
+
+		u16 shiftR = 0;
+		num2 = (slideSwitchIn & 0x0FC0) >> 6;
+		shiftR = num2 & 0x0020;
+		shiftR = shiftR >> 5;
+		if(shiftR == 1)
+			num2 = num2 | 0xFFC0;
+
+
+		// Update the values to be used for 13th, 14th, 15th and 16th slide switch (for operation selection)
+
+		switch1 = slideSwitchIn & 0x1000;
+		switch2 = slideSwitchIn & 0x2000;
+		switch3 = slideSwitchIn & 0x4000;
+		switch4 = slideSwitchIn & 0x8000;
+
+		// Update the values of real and imaginary numbers into the system for calculation
+		a = creal(z);
+		b = cimag(z);
+
+		// 13th switch enables user to calculate arithmetic operations
+		if(switch1)//when 13th switch is turned on
+		{
+			if(BTNL == 1) // when left button is pressed
+					{
+						while(BTNL == 1) // when left button is released
+						{
+							slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1); /* written back so that the inputs of */
+							BTNL = XGpio_DiscreteRead(&P_BTN_LEFT, 1);				/* the button, switches and LEDS could */
+							num1 = slideSwitchIn & 0x003F;
+							shiftI = num1 & 0x0020;
+							shiftI = shiftI >> 5;
+							if(shiftI == 1)
+								num1 = num1 | 0xFFC0;
+							num2 = (slideSwitchIn & 0x0FC0) >> 6;
+							shiftR = num2 & 0x0020;
+							shiftR = shiftR >> 5;
+							if(shiftR == 1)
+								num2 = num2 | 0xFFC0;
+							XGpio_DiscreteWrite(&LED_OUT, 1, slideSwitchIn);
+							calc_num = 1;				//subtraction operation selection
+							if(num2>=0)
+								displayNumber(num2, 2);
+							else
+								displayNumber(num2, 3);
+							if(BTNL == 0)
+							{
+								calculation(calc_num, &z, num1, num2, &deci_I, &deci_R); // subtraction operation is performed and stored in output
+							}
+						}
+					}
+
+			if (BTNR == 1) // when right button is pressed
+			{
+						while(BTNR == 1) // when right button is released
+						{
+							slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1);	/* same format as the button before */
+							BTNR = XGpio_DiscreteRead(&P_BTN_RIGHT, 1);
+							num2 = (slideSwitchIn & 0x0FC0) >> 6;
+							num1 = slideSwitchIn & 0x003F;
+							XGpio_DiscreteWrite(&LED_OUT, 1, slideSwitchIn);
+							calc_num = 0;				//addition operation selection
+							displayNumber(num2, 2);
+							if(BTNR == 0)
+							{
+								calculation(calc_num, &z, num1, num2, &deci_I, &deci_R);
+							}
+						}
+					}
+
+			if (BTNU == 1) // when up button is pressed
+					{
+						while(BTNU == 1) // when up button is released
+						{
+							slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1);	/* same format as the button before */
+							BTNU = XGpio_DiscreteRead(&P_BTN_UP, 1);
+							num2 = (slideSwitchIn & 0x0FC0) >> 6;
+							num1 = slideSwitchIn & 0x003F;
+							XGpio_DiscreteWrite(&LED_OUT, 1, slideSwitchIn);
+							calc_num = 2;				//multiplication operation selection
+							displayNumber(num2, 2);
+							if(BTNU == 0)
+							{
+								calculation(calc_num, &z, num1, num2, &deci_I, &deci_R); // subtraction operation is performed and stored in output
+							}
+						}
+					}
+
+			if (BTND == 1) // when down button is pressed
+					{
+						while(BTND == 1) // when down button is released
+						{
+							slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1); /* same format as the button before */
+							BTND = XGpio_DiscreteRead(&P_BTN_DOWN, 1);
+							num2 = (slideSwitchIn & 0x0FC0) >> 6;
+							num1 = slideSwitchIn & 0x003F;
+							XGpio_DiscreteWrite(&LED_OUT, 1, slideSwitchIn);
+							calc_num = 3;				//division operation selection
+							displayNumber(num2, 2);
+							if(BTND == 0)
+							{
+								calculation(calc_num, &z, num1, num2, &deci_I, &deci_R); // subtraction operation is performed and stored in output
+							}
+						}
+					}
+		}
+		//14th switch enables power, square root, sine and cosine calculation
+		else if (switch2){//when 14th switch is turned on
+			if(BTNL == 1) // when left button is pressed
+					{
+						while(BTNL == 1) // when left button is released
+						{
+							slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1); /* written back so that the inputs of */
+							BTNL = XGpio_DiscreteRead(&P_BTN_LEFT, 1);				/* the button, switches and LEDS could */
+							num2 = (slideSwitchIn & 0x0FC0) >> 6;					/* maintain their values.			*/
+							num1 = slideSwitchIn & 0x003F;
+							XGpio_DiscreteWrite(&LED_OUT, 1, slideSwitchIn);
+							calc_num = 6;				//power operation selection
+							displayNumber(num2, 2);
+							if(BTNL == 0)
+							{
+								calculation(calc_num, &z, num1, num2, &deci_I, &deci_R); // subtraction operation is performed and stored in output
+							}
+						}
+					}
+
+			if (BTNR == 1) // when right button is pressed
+			{
+						while(BTNR == 1) // when right button is released
+						{
+							slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1);	/* same format as the button before */
+							BTNR = XGpio_DiscreteRead(&P_BTN_RIGHT, 1);
+							num2 = (slideSwitchIn & 0x0FC0) >> 6;
+							num1 = slideSwitchIn & 0x003F;
+							XGpio_DiscreteWrite(&LED_OUT, 1, slideSwitchIn);
+							calc_num = 7;				//square root selection
+							displayNumber(num2, 2);
+							if(BTNR == 0)
+							{
+								calculation(calc_num, &z, num1, num2, &deci_I, &deci_R);
+								// subtraction operation is performed and stored in output
+							}
+						}
+					}
+
+			if (BTNU == 1) // when up button is pressed
+					{
+						while(BTNU == 1) // when up button is released
+						{
+							slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1);	/* same format as the button before */
+							BTNU = XGpio_DiscreteRead(&P_BTN_UP, 1);
+							num2 = (slideSwitchIn & 0x0FC0) >> 6;
+							num1 = slideSwitchIn & 0x003F;
+							XGpio_DiscreteWrite(&LED_OUT, 1, slideSwitchIn);
+							calc_num = 8;				//sine operation selection
+							displayNumber(num2, 2);
+							if(BTNU == 0)
+							{
+								calculation(calc_num, &z, num1, num2, &deci_I, &deci_R); // subtraction operation is performed and stored in output
+							}
+						}
+					}
+
+			if (BTND == 1) // when down button is pressed
+					{
+						while(BTND == 1) // when down button is released
+						{
+							slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1); /* same format as the button before */
+							BTND = XGpio_DiscreteRead(&P_BTN_DOWN, 1);
+							num2 = (slideSwitchIn & 0x0FC0) >> 6;
+							num1 = slideSwitchIn & 0x003F;
+							XGpio_DiscreteWrite(&LED_OUT, 1, slideSwitchIn);
+							calc_num = 9;				//cosine operation selection
+							displayNumber(num2, 2);
+							if(BTND == 0)
+							{
+								calculation(calc_num, &z, num1, num2, &deci_I, &deci_R); // subtraction operation is performed and stored in output
+							}
+						}
+					}
+		}
+		//15th switch enables tangent, exponential, natural logarithm and logarithm base 10 calculation
+		else if (switch3){//when 15th switch is turned on
+			if(BTNL == 1) // when left button is pressed
+					{
+						while(BTNL == 1) // when left button is released
+						{
+							slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1); /* written back so that the inputs of */
+							BTNL = XGpio_DiscreteRead(&P_BTN_LEFT, 1);				/* the button, switches and LEDS could */
+							num2 = (slideSwitchIn & 0x0FC0) >> 6;					/* maintain their values.			*/
+							num1 = slideSwitchIn & 0x003F;
+							XGpio_DiscreteWrite(&LED_OUT, 1, slideSwitchIn);
+							calc_num = 10;				//tangent operation selection
+							displayNumber(num2, 2);
+							if(BTNL == 0)
+							{
+								calculation(calc_num, &z, num1, num2, &deci_I, &deci_R); // subtraction operation is performed and stored in output
+							}
+						}
+					}
+
+			if (BTNR == 1) // when right button is pressed
+			{
+						while(BTNR == 1) // when right button is released
+						{
+							slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1);	/* same format as the button before */
+							BTNR = XGpio_DiscreteRead(&P_BTN_RIGHT, 1);
+							num2 = (slideSwitchIn & 0x0FC0) >> 6;
+							num1 = slideSwitchIn & 0x003F;
+							XGpio_DiscreteWrite(&LED_OUT, 1, slideSwitchIn);
+							calc_num = 11;				//exponential operation selection
+							displayNumber(num2, 2);
+							if(BTNR == 0)
+							{
+								calculation(calc_num, &z, num1, num2, &deci_I, &deci_R);
+								// subtraction operation is performed and stored in output
+							}
+						}
+					}
+
+			if (BTNU == 1) // when up button is pressed
+					{
+						while(BTNU == 1) // when up button is released
+						{
+							slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1);	/* same format as the button before */
+							BTNU = XGpio_DiscreteRead(&P_BTN_UP, 1);
+							num2 = (slideSwitchIn & 0x0FC0) >> 6;
+							num1 = slideSwitchIn & 0x003F;
+							XGpio_DiscreteWrite(&LED_OUT, 1, slideSwitchIn);
+							calc_num = 12;				//natural log operation selection
+							displayNumber(num2, 2);
+							if(BTNU == 0)
+							{
+								calculation(calc_num, &z, num1, num2, &deci_I, &deci_R); // subtraction operation is performed and stored in output
+							}
+						}
+					}
+
+			if (BTND == 1) // when down button is pressed
+					{
+						while(BTND == 1) // when down button is released
+						{
+							slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1); /* same format as the button before */
+							BTND = XGpio_DiscreteRead(&P_BTN_DOWN, 1);
+							num2 = (slideSwitchIn & 0x0FC0) >> 6;
+							num1 = slideSwitchIn & 0x003F;
+							XGpio_DiscreteWrite(&LED_OUT, 1, slideSwitchIn);
+							calc_num = 13;				//logarithm base 10 operation selection
+							displayNumber(num2, 2);
+							if(BTND == 0)
+							{
+								calculation(calc_num, &z, num1, num2, &deci_I, &deci_R); // subtraction operation is performed and stored in output
+							}
+						}
+					}
+		}
+		else //If none of the slide switches is not selected
+		{
+			if(BTNL == 1) // when left button is pressed
+					{
+						while(BTNL == 1) // when left button is released
+						{
+							slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1); /* written back so that the inputs of */
+							BTNL = XGpio_DiscreteRead(&P_BTN_LEFT, 1);				/* the button, switches and LEDS could */
+							num2 = (slideSwitchIn & 0x0FC0) >> 6;					/* maintain their values.			*/
+							num1 = slideSwitchIn & 0x003F;
+							XGpio_DiscreteWrite(&LED_OUT, 1, slideSwitchIn);
+							calc_num = 4;				//inverse subtraction selection
+							displayNumber(num2, 2);
+							if(BTNL == 0)
+							{
+								calculation(calc_num, &z, num1, num2, &deci_I, &deci_R); // subtraction operation is performed and stored in output
+							}
+						}
+					}
+
+			if (BTND == 1) // when down button is pressed
+					{
+						while(BTND == 1) // when down button is released
+						{
+							slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1); /* same format as the button before */
+							BTND = XGpio_DiscreteRead(&P_BTN_DOWN, 1);
+							num2 = (slideSwitchIn & 0x0FC0) >> 6;
+							num1 = slideSwitchIn & 0x003F;
+							XGpio_DiscreteWrite(&LED_OUT, 1, slideSwitchIn);
+							calc_num = 5;				//inverse division selection
+							displayNumber(num2, 2);
+							if(BTND == 0)
+							{
+								calculation(calc_num, &z, num1, num2, &deci_I, &deci_R); // subtraction operation is performed and stored in output
+							}
+						}
+					}
+			/* This section detects if the real/imaginary number is a positive whole or decimal
+			 number, or negative whole or decimal number.*/
+				if(a >= 0) 					// Detects if real number is positive
+				{
+					if(deci_R == 1)			// Detects if it is a decimal number
+					{
+						a = a * 10;
+						decideR = 1;		// Moves the number to decimal display
+					}
+					else					// Whole number
+					{
+						decideR = 2;		// Moves the number to whole number display
+					}
+				}
+				else if(a < 0)				// Detects if real number is negative
+				{	if(deci_R == 4)			// Detects if it is a negative decimal number
+					{
+						a = a * 10;
+						decideR = 4;		// Moves the number to negative decimal display
+					}
+					else					// Negative whole number
+					{
+					decideR = 3;			// Moves the number to negative whole number display
+					}
+				}
+				/* This section of imaginary number uses the same method of "if-else" statement from the
+				   real number before */
+				if(b >= 0)
+				{
+					if(deci_I == 1)
+					{
+						b = b * 10;
+						decideI = 1;
+					}
+					else
+					{
+						decideI = 2;
+					}
+				}
+				else if(b < 0)
+				{
+					if(deci_I == 4)
+					{
+						b = b * 10;
+						decideI = 4;
+					}
+					else
+					{
+					decideI = 3;
+					}
+				}
+				/* This section would detect if the user wants the number to be displayed. When the right button is pressed, the user
+				   could see the value of real number and imaginary number both separated by a second. As the user releases the button,
+				   the display will display '0' indicating the answer has been shown. It uses 'counter' loop by if else which is possible
+				   due to the 'while(1)' function characteristic.*/
+				if (BTNR == 1)
+				{
+					counter = 0;
+					display_num = 0;
+					while(BTNR == 1){
+						BTNR = XGpio_DiscreteRead(&P_BTN_RIGHT, 1);
+						if(display_num == 0){
+							displayNumber(a, decideR);	// Displays real number first
+						}
+						else if(display_num == 2){
+							displayNumber(b, decideI);	// Then imaginary number
+						}
+						if(counter  == TIMER){ 	// Amount of time needed to interrupt the service
+							display_num = display_num + 1;
+							counter = 0;
+						}
+						if(display_num == 3)	// Reset the loop
+						{
+							display_num = 0;
+						}
+						counter++;
+					}
+				}
+				else{
+					displayNumber(0,5);					// Displays blank if button is released to ensure user to differentiate 1st display as real and 2nd display as imaginary
+				}
+
+
+			}
+		}
+
+/* 								Regarding the structure of the code :
+
+   1) The slideSwitchIn and BTN# variables are defined in the while function when the button is pressed.
+ 	  This is so that the code reads that the button is pressed. This also enables the input values to be
+      displayed on the 7-segment display and also at the LEDs when the user is holding the button while
+      while inputting the values.
+
+   2) When the switch for operation is turned on, the user can choose 4 different operations depending on
+      the switch that are selected. The mode for switch selection is already commented for every button under
+      each switch. This enables the calculator to perform repeated calculations. 'Inverse' subtraction and division
+      are also added for the user to have an illusion of brackets '()' like how a normal calculator can perform.
+
+   3) After the user closes the switch, the calculated values are then input into the answer which
+      could then be displayed if the user presses the right button. This enables the user to be updated with the
+      value of the answers.
+
+ */
+
+    cleanup_platform();
+    return 0;
+}
+

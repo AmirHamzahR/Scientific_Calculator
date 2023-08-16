@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Nov 24 19:02:30 2020
+# Process ID: 2160
+# Log file: F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/vivado.log
+# Journal file: F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.xpr
+launch_sdk -workspace F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf

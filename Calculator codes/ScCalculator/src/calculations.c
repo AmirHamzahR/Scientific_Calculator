@@ -1,0 +1,567 @@
+/*
+	Author : s1945267		File : calculations.c
+*/
+
+#include "calculations.h"
+#include "xgpio.h"
+#include "gpio_init.h"
+#include <math.h>
+#include <complex.h>
+/*------------------------------------------------------------------------------*/
+
+
+// function to shift numbers and display it when inputting
+void input_shift(s16 *numI, s16 *numR, s16 *slideSwitchIn){
+	*slideSwitchIn = XGpio_DiscreteRead(&SLIDE_SWITCHES, 1);
+	XGpio_DiscreteWrite(&LED_OUT, 1, *slideSwitchIn);
+	u16 shiftI = 0;
+	*numI = *slideSwitchIn & 0x003F;
+	shiftI = *numI & 0x0020;
+	shiftI = shiftI >> 5;
+	if(shiftI == 1)
+		*numI = *numI | 0xFFC0;
+
+	u16 shiftR = 0;
+	*numR = (*slideSwitchIn & 0x0FC0) >> 6;
+	shiftR = *numR & 0x0020;
+	shiftR = shiftR >> 5;
+	if(shiftR == 1)
+		*numR = *numR | 0xFFC0;
+	//Detects if real number input is larger or less than 0
+	if(*numR>=0)
+		displayNumber(*numR, 2);
+	else
+		displayNumber(*numR, 3);
+}
+
+
+/* This function detects if the real/imaginary number is a positive whole or decimal
+	number, or negative whole or decimal number.*/
+void value_detection(double *a, double *b, u16 deci_I, u16 deci_R, u16 *decideI, u16 *decideR){
+
+		if(*a >= 0) 					// Detects if real number is positive
+		{
+			if(deci_R == 1)			// Detects if it is a decimal number
+			{
+				*a = *a * 10;
+				*decideR = 1;		// Moves the number to decimal display
+			}
+			else if(deci_R == 6){
+				*decideR = 6;
+			}
+			else					// Whole number
+			{
+				*decideR = 2;		// Moves the number to whole number display
+			}
+		}
+		else if(*a < 0)				// Detects if real number is negative
+		{	if(deci_R == 4)			// Detects if it is a negative decimal number
+			{
+				*a = *a * 10;
+				*decideR = 4;		// Moves the number to negative decimal display
+			}
+			else if(deci_R == 6){
+				*decideR = 6;
+			}
+			else					// Negative whole number
+			{
+			*decideR = 3;			// Moves the number to negative whole number display
+			}
+		}
+		/* This section of imaginary number uses the same method of "if-else" statement from the
+		   real number before */
+		if(*b >= 0)
+		{
+			if(deci_I == 1)
+			{
+				*b = *b * 10;
+				*decideI = 1;
+			}
+			else if(deci_I == 6){
+				*decideI = 6;
+			}
+			else
+			{
+				*decideI = 2;
+			}
+		}
+		else if(*b < 0)
+		{
+			if(deci_I == 4)
+			{
+				*b = *b * 10;
+				*decideI = 4;
+			}
+			else if(deci_I == 6){
+				*decideI = 6;
+			}
+			else
+			{
+			*decideI = 3;
+			}
+		}
+}
+
+
+// calculation function using switch case
+void calculation(u16 function, double complex *z,  s32 num1, s32 num2, u16 *deci_I, u16 *deci_R)
+{
+	switch (function) {
+	case 0:
+		adder(z, num2, num1, deci_I, deci_R);
+		break;
+	case 1:
+		subtractor(z, num2, num1, deci_I, deci_R);
+		break;
+	case 2:
+		multiplicator(z, num2, num1, deci_I, deci_R);
+		break;
+	case 3:
+		divider(z, num2, num1, deci_I, deci_R);
+		break;
+	case 4:
+		rev_subtractor(z, num2, num1, deci_I, deci_R);
+		break;
+	case 5:
+		rev_divider(z, num2, num1, deci_I, deci_R);
+		break;
+	case 6:
+		power(z, num2, num1, deci_I, deci_R);
+		break;
+	case 7:
+		sq_root(z, num2, num1, deci_I, deci_R);
+		break;
+	case 8:
+		sine(z, num2, num1, deci_I, deci_R);
+		break;
+	case 9:
+		cosine(z, num2, num1, deci_I, deci_R);
+		break;
+	case 10:
+		tangent(z, num2, num1, deci_I, deci_R);
+		break;
+	case 11:
+		exponential(z, num2, num1, deci_I, deci_R);
+		break;
+	case 12:
+		nat_log(z, num2, num1, deci_I, deci_R);
+		break;
+	case 13:
+		logarithm(z, num2, num1, deci_I, deci_R);
+		break;
+	}
+}
+
+
+// Code calculation for addition
+void adder(double complex *z, s32 num2, s32 num1, u16 *deci_I, u16 *deci_R)
+		{
+		double complex add = num2 + num1 * I; 		// Detects if complex number is present and calculates it
+				*z = *z + (add);
+			 	double complex result;
+		 	  	s16 dec_I1, dec_R1;		// Detects if complex number is present and calculates it
+	    		result = *z * 10;		// This method is used since it double cannot use '%' to check remainders.
+	    		dec_I1= cimag(result);
+	    		dec_R1 = creal (result);
+	    		if (dec_I1 % 10 != 0){	// Detects decimal numbers for imaginary numbers
+	    			if(dec_I1 > 0){
+	    				*deci_I = 1;
+	    			}
+	    			else if(dec_I1 < 0){
+	    				*deci_I = 4;
+	    			}
+	    		}
+	    		if (dec_R1 % 10 != 0){	// Detects decimal numbers for real numbers
+	    			if(dec_R1 > 0){
+	    				*deci_R = 1;
+	    			}
+	    			else if(dec_R1 < 0){
+	    				*deci_R = 4;
+	    			}
+	    		}
+		}
+// Calculation for subtraction (ans - input)
+void subtractor(double complex *z, s32 num2, s32 num1, u16 *deci_I, u16 *deci_R)
+        {
+		double complex sub = num2 + num1 * I;	/// Detects if complex number is present and calculates it
+				*z = *z - sub;
+			 	double complex result;	// Used to detect the decimal number
+		 	  	s16 dec_I1, dec_R1;		// Detects if complex number is present and calculates it
+	    		result = *z * 10;		// This method is used since it double cannot use '%' to check remainders.
+	    		dec_I1= cimag(result);
+	    		dec_R1 = creal (result);
+	    		if (dec_I1 % 10 != 0){	// Detects decimal numbers for imaginary numbers
+	    			if(dec_I1 > 0){
+	    				*deci_I = 1;
+	    			}
+	    			else if(dec_I1 < 0){
+	    				*deci_I = 4;
+	    			}
+	    		}
+	    		if (dec_R1 % 10 != 0){	// Detects decimal numbers for imaginary numbers
+	    			if(dec_R1 > 0){
+	    				*deci_R = 1;
+	    			}
+	    			else if(dec_R1 < 0){
+	    				*deci_R = 4;
+	    			}
+	    		}
+        }
+// Code calculation for multiplication
+void multiplicator(double complex *z, s32 num2, s32 num1, u16 *deci_I, u16 *deci_R)
+        {
+		double complex mult = num2 + num1 * I;			// Detects if complex number is present and calculates it
+        		double complex result;
+        		*z = *z * mult;
+         	  	s16 dec_I1, dec_R1;
+            	result = *z * 10;		/*			Same section for decimal detection as before 			*/
+            	dec_I1= cimag(result);
+            	dec_R1 = creal (result);
+            	if (dec_I1 % 10 != 0){
+            		if(dec_I1 > 0){
+            			*deci_I = 1;
+            		}
+            		else if(dec_I1 < 0){
+            			*deci_I = 4;
+            		}
+            	}
+            	if (dec_R1 % 10 != 0){
+            		if(dec_R1 > 0){
+            			*deci_R = 1;
+            		}
+            		else if(dec_R1 < 0){
+            			*deci_R = 4;
+            		}
+            	}
+        }
+// Code calculation for division (answer/input)
+ void divider(double complex *z, s32 num2, s32 num1, u16 *deci_I, u16 *deci_R)
+        {
+	 	double complex div = num2 + num1 * I;
+	 	double complex result;
+ 	  	s16 dec_I1, dec_R1;		/*			Same section for decimal detection as before 			*/
+ 	  	if(div == 0){
+ 	  		*deci_I = 6;
+ 	  		*deci_R = 6;
+ 	  	}
+ 	  	else{
+ 	  		*z = *z / div;
+ 	  	}
+
+
+    		result = *z * 10;
+    		dec_I1= cimag(result);
+    		dec_R1 = creal (result);
+    		if (dec_I1 % 10 != 0){
+    			if(dec_I1 > 0){
+    				*deci_I = 1;
+    			}
+    			else if(dec_I1 < 0){
+    				*deci_I = 4;
+    			}
+    		}
+    		if (dec_R1 % 10 != 0){
+    			if(dec_R1 > 0){
+    				*deci_R = 1;
+    			}
+    			else if(dec_R1 < 0){
+    				*deci_R = 4;
+    			}
+    		}
+        }
+
+ // Code calculation for reverse subtraction (input - answer)
+void rev_subtractor(double complex *z, s32 num2, s32 num1, u16 *deci_I, u16 *deci_R)
+        {
+		double complex sub = num2 + num1 * I;	/// Detects if complex number is present and calculates it
+				*z = *z - sub;
+			 	double complex result;	/*			Same section for decimal detection as before 			*/
+		 	  	s16 dec_I1, dec_R1;		// Detects if complex number is present and calculates it
+	    		result = *z * 10;
+	    		dec_I1= cimag(result);
+	    		dec_R1 = creal (result);
+	    		if (dec_I1 % 10 != 0){	// Detects decimal numbers for imaginary numbers
+	    			if(dec_I1 > 0){
+	    				*deci_I = 1;
+	    			}
+	    			else if(dec_I1 < 0){
+	    				*deci_I = 4;
+	    			}
+	    		}
+	    		if (dec_R1 % 10 != 0){
+	    			if(dec_R1 > 0){
+	    				*deci_R = 1;
+	    			}
+	    			else if(dec_R1 < 0){
+	    				*deci_R = 4;
+	    			}
+	    		}
+        }
+// Code calculation for reverse divide (input/ answer)
+void rev_divider(double complex *z, s32 num2, s32 num1, u16 *deci_I, u16 *deci_R)
+        {
+ 		double complex div = num2 + num1 * I;
+		double complex result;		/*			Same section for decimal detection as before 			*/
+	 	  	s16 dec_I1, dec_R1;		// Detects if complex number is present and calculates it
+	 	  	if(*z == 0){
+	 	  		*deci_I = 6;
+	 	  		*deci_R = 6;
+	 	  	}
+	 	  	else{
+	 	  		*z = div / *z;
+	 	  	}
+
+	    		result = *z * 10;
+	    		dec_I1= cimag(result);
+	    		dec_R1 = creal (result);
+	    		if (dec_I1 % 10 != 0){	// Detects decimal numbers for imaginary numbers
+	    			if(dec_I1 > 0){
+	    				*deci_I = 1;
+	    			}
+	    			else if(dec_I1 < 0){
+	    				*deci_I = 4;
+	    			}
+	    		}
+	    		if (dec_R1 % 10 != 0){
+	    			if(dec_R1 > 0){
+	    				*deci_R = 1;
+	    			}
+	    			else if(dec_R1 < 0){
+	    				*deci_R = 4;
+	    			}
+	    		}
+        }
+// Code calculation for power
+void power(double complex *z, s32 num2, s32 num1, u16 *deci_I, u16 *deci_R)
+       {
+	 	double complex tothepower = num2 + num1 * I;
+	 	double complex result;	/*			Same section for decimal detection as before 			*/
+	  	s16 dec_I1, dec_R1;		// Detects if complex number is present and calculates it
+	  	*z = cpow(*z, tothepower);
+   		result = *z * 10;
+   		dec_I1= cimag(result);
+   		dec_R1 = creal (result);
+   		if (dec_I1 % 10 != 0){	// Detects decimal numbers
+   			if(dec_I1 > 0){
+   				*deci_I = 1;
+   			}
+   			else if(dec_I1 < 0){
+   				*deci_I = 4;
+   			}
+   		}
+   		if (dec_R1 % 10 != 0){
+   			if(dec_R1 > 0){
+   				*deci_R = 1;
+   			}
+   			else if(dec_R1 < 0){
+   				*deci_R = 4;
+   			}
+   		}
+
+       }
+// Code calculation for square root
+void sq_root(double complex *z, s32 num2, s32 num1, u16 *deci_I, u16 *deci_R)
+       {
+ 	double complex result;
+  	s16 dec_I1, dec_R1;		// Detects if complex number is present and calculates it
+  		*z = csqrt(*z); // Calculates the sqrt of *z
+
+		result = *z * 10;	/*			Same section for decimal detection as before 			*/
+		dec_I1= cimag(result);
+		dec_R1 = creal (result);
+		if (dec_I1 % 10 != 0){	// Detects decimal numbers
+			if(dec_I1 > 0){
+				*deci_I = 1;
+			}
+			else if(dec_I1 < 0){
+				*deci_I = 4;
+			}
+		}
+		if (dec_R1 % 10 != 0){
+			if(dec_R1 > 0){
+				*deci_R = 1;
+			}
+			else if(dec_R1 < 0){
+				*deci_R = 4;
+			}
+		}
+
+       }
+// Code calculation for sine
+void sine(double complex *z, s32 num2, s32 num1, u16 *deci_I, u16 *deci_R)
+       {
+ 	double complex result;
+ 	double complex a;
+    double complex val = PI / 180;
+  	s16 dec_I1, dec_R1;		// Detects if complex number is present and calculates it
+		a = *z * val;
+		*z = csin(a);
+		result = *z * 10;		/*			Same section for decimal detection as before 			*/
+		dec_I1= cimag(result);
+		dec_R1 = creal (result);
+		if (dec_I1 % 10 != 0){	// Detects decimal numbers
+			if(dec_I1 > 0){
+				*deci_I = 1;
+			}
+			else if(dec_I1 < 0){
+				*deci_I = 4;
+			}
+		}
+		if (dec_R1 % 10 != 0){
+			if(dec_R1 > 0){
+				*deci_R = 1;
+			}
+			else if(dec_R1 < 0){
+				*deci_R = 4;
+			}
+		}
+
+       }
+// Code calculation for cosine
+void cosine(double complex *z, s32 num2, s32 num1, u16 *deci_I, u16 *deci_R)
+       {
+ 	double complex result;
+ 	double complex a;
+    double val = PI / 180;
+  	s16 dec_I1, dec_R1;		// Detects if complex number is present and calculates it
+		a = *z * val;
+		*z = ccos(a);// Calculates the cosine of *z
+		result = *z * 10;		/*			Same section for decimal detection as before 			*/
+		dec_I1= cimag(result);
+		dec_R1 = creal (result);
+		if (dec_I1 % 10 != 0){	// Detects decimal numbers
+			if(dec_I1 > 0){
+				*deci_I = 1;
+			}
+			else if(dec_I1 < 0){
+				*deci_I = 4;
+			}
+		}
+		if (dec_R1 % 10 != 0){
+			if(dec_R1 > 0){
+				*deci_R = 1;
+			}
+			else if(dec_R1 < 0){
+				*deci_R = 4;
+			}
+		}
+
+       }
+// Code calculation for tangent
+void tangent(double complex *z, s32 num2, s32 num1, u16 *deci_I, u16 *deci_R)
+       {
+ 	double complex result;
+ 	double complex a;
+    double val = PI / 180;
+  	s16 dec_I1, dec_R1;		// Detects if complex number is present and calculates it
+		a = *z * val;
+		*z = ctan(a); 		// Calculates the tangent of *z
+		result = *z * 10;		/*			Same section for decimal detection as before 			*/
+		dec_I1= cimag(result);
+		dec_R1 = creal (result);
+		if (dec_I1 % 10 != 0){	// Detects decimal numbers
+			if(dec_I1 > 0){
+				*deci_I = 1;
+			}
+			else if(dec_I1 < 0){
+				*deci_I = 4;
+			}
+		}
+		if (dec_R1 % 10 != 0){
+			if(dec_R1 > 0){
+				*deci_R = 1;
+			}
+			else if(dec_R1 < 0){
+				*deci_R = 4;
+			}
+		}
+
+       }
+// Code calculation for exponential
+void exponential(double complex *z, s32 num2, s32 num1, u16 *deci_I, u16 *deci_R)
+       {
+ 	double complex result;
+  	s16 dec_I1, dec_R1;		// Detects if complex number is present and calculates it
+		*z = cexp(*z);
+		result = *z * 10;	/*			Same section for decimal detection as before 			*/
+		dec_I1= cimag(result);
+		dec_R1 = creal (result);
+		if (dec_I1 % 10 != 0){	// Detects decimal numbers
+			if(dec_I1 > 0){
+				*deci_I = 1;
+			}
+			else if(dec_I1 < 0){
+				*deci_I = 4;
+			}
+		}
+		if (dec_R1 % 10 != 0){
+			if(dec_R1 > 0){
+				*deci_R = 1;
+			}
+			else if(dec_R1 < 0){
+				*deci_R = 4;
+			}
+		}
+
+       }
+// Code calculation for natural logarithm
+void nat_log(double complex *z, s32 num2, s32 num1, u16 *deci_I, u16 *deci_R)
+       {
+ 	double complex result;
+  	s16 dec_I1, dec_R1;		// Detects if complex number is present and calculates it
+		*z = clog(*z);
+		result = *z * 10;			/*			Same section for decimal detection as before 			*/
+		dec_I1= cimag(result);
+		dec_R1 = creal (result);
+		if (dec_I1 % 10 != 0){	// Detects decimal numbers
+			if(dec_I1 > 0){
+				*deci_I = 1;
+			}
+			else if(dec_I1 < 0){
+				*deci_I = 4;
+			}
+		}
+		if (dec_R1 % 10 != 0){
+			if(dec_R1 > 0){
+				*deci_R = 1;
+			}
+			else if(dec_R1 < 0){
+				*deci_R = 4;
+			}
+		}
+
+       }
+// Code calculation for logarithm base 10
+void logarithm(double complex *z, s32 num2, s32 num1, u16 *deci_I, u16 *deci_R)
+       {
+ 	double complex result;
+  	s16 dec_I1, dec_R1;		// Detects if complex number is present and calculates it
+
+		*z = clog(*z)/clog(10); /* Since log() can't be used, I used clog() with logarithm law to */
+		result = *z * 10;		/*	enable complex numbers to be calculated. */
+		dec_I1= cimag(result);	/*			Same section for decimal detection as before 			*/
+		dec_R1 = creal (result);
+		if (dec_I1 % 10 != 0){	// Detects decimal numbers
+			if(dec_I1 > 0){
+				*deci_I = 1;
+			}
+			else if(dec_I1 < 0){
+				*deci_I = 4;
+			}
+		}
+		if (dec_R1 % 10 != 0){
+			if(dec_R1 > 0){
+				*deci_R = 1;
+			}
+			else if(dec_R1 < 0){
+				*deci_R = 4;
+			}
+		}
+
+
+       }
+
+
+/*	The functions for the all the calculations are defined here so that it will be transferred to the
+	main function.
+*/

@@ -1,0 +1,1074 @@
+13:07:24 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+13:07:25 INFO  : XSDB server has started successfully.
+13:07:25 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+13:15:18 ERROR :  [Hsi 55-1433] Error boost::filesystem::copy_file: The system cannot find the path specified: "F:/Xilinx2/SDK/2015.2/data\embeddedsw\lib\bsp\standalone_v5_1/src\cortexa53\gcc\initialise_monitor_handles.c", "F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_bsp\microblaze_0/libsrc/standalone_v5_1/src\cortexa53\gcc\initialise_monitor_handles.c"
+F:/Xilinx2/SDK/2015.2/gnu/microblaze/nt
+13:30:29 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+13:30:30 INFO  : XSDB server has started successfully.
+13:30:31 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+13:30:32 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+13:31:12 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+13:31:13 INFO  : XSDB server has started successfully.
+13:31:14 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+13:31:15 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+13:31:52 ERROR :  [Hsi 55-1433] Error boost::filesystem::copy_file: The system cannot find the path specified: "F:/Xilinx2/SDK/2015.2/data\embeddedsw\lib\bsp\standalone_v5_1/src\cortexa53\gcc\initialise_monitor_handles.c", "F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1_bsp\microblaze_0/libsrc/standalone_v5_1/src\cortexa53\gcc\initialise_monitor_handles.c"
+F:/Xilinx2/SDK/2015.2/gnu/microblaze/nt
+13:33:10 ERROR :  [Hsi 55-1433] Error boost::filesystem::copy_file: The system cannot find the path specified: "F:/Xilinx2/SDK/2015.2/data\embeddedsw\lib\bsp\standalone_v5_1/src\cortexa53\gcc\initialise_monitor_handles.c", "F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1_bsp\microblaze_0/libsrc/standalone_v5_1/src\cortexa53\gcc\initialise_monitor_handles.c"
+F:/Xilinx2/SDK/2015.2/gnu/microblaze/nt
+13:33:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:33:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+13:34:01 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+13:39:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:39:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+13:39:12 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+13:39:15 WARN  : Unable to obtain port 2350 for use by XMD, java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+13:39:16 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: A program file was not specified in the launch configuration.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:552)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+13:48:04 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+13:49:11 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+13:49:12 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+13:49:12 INFO  : XSDB server has started successfully.
+13:49:13 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+13:50:07 ERROR :  [Hsi 55-1433] Error boost::filesystem::copy_file: The system cannot find the path specified: "F:/Xilinx2/SDK/2015.2/data\embeddedsw\lib\bsp\standalone_v5_1/src\cortexa53\gcc\initialise_monitor_handles.c", "F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\2Calculator_bsp\microblaze_0/libsrc/standalone_v5_1/src\cortexa53\gcc\initialise_monitor_handles.c"
+F:/Xilinx2/SDK/2015.2/gnu/microblaze/nt
+14:01:28 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Project Calculator_1 does not exist. Please check that your launch configuration specifies a valid project in your workspace.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:552)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+14:01:57 INFO  : Processor reset is completed for microblaze_0
+14:03:57 INFO  : Processor reset is completed for microblaze_0
+14:04:49 INFO  : Processor reset is completed for microblaze_0
+14:06:03 INFO  : Processor reset is completed for microblaze_0
+14:07:14 INFO  : Processor reset is completed for microblaze_0
+14:27:45 INFO  : Processor reset is completed for microblaze_0
+14:34:53 INFO  : Processor reset is completed for microblaze_0
+14:35:39 INFO  : Processor reset is completed for microblaze_0
+14:45:09 INFO  : Processor reset is completed for microblaze_0
+14:45:55 INFO  : Processor reset is completed for microblaze_0
+14:46:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:46:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+14:46:58 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+14:47:09 INFO  : Processor reset is completed for microblaze_0
+14:47:49 INFO  : Processor reset is completed for microblaze_0
+14:49:37 INFO  : Processor reset is completed for microblaze_0
+14:49:58 INFO  : Processor reset is completed for microblaze_0
+14:51:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:51:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+14:51:13 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+14:51:17 INFO  : Processor reset is completed for microblaze_0
+15:38:23 INFO  : Processor reset is completed for microblaze_0
+16:15:07 INFO  : Processor reset is completed for microblaze_0
+16:17:04 INFO  : Processor reset is completed for microblaze_0
+16:17:39 INFO  : Processor reset is completed for microblaze_0
+16:21:23 INFO  : Processor reset is completed for microblaze_0
+16:37:22 INFO  : Processor reset is completed for microblaze_0
+16:44:23 INFO  : Processor reset is completed for microblaze_0
+16:45:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:45:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+16:45:05 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+16:45:11 INFO  : Processor reset is completed for microblaze_0
+16:46:23 INFO  : Processor reset is completed for microblaze_0
+16:47:01 INFO  : Processor reset is completed for microblaze_0
+16:48:56 INFO  : Processor reset is completed for microblaze_0
+16:49:41 INFO  : Processor reset is completed for microblaze_0
+16:58:29 INFO  : Processor reset is completed for microblaze_0
+16:59:42 INFO  : Processor reset is completed for microblaze_0
+17:02:10 INFO  : Processor reset is completed for microblaze_0
+17:02:10 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot run JTAG sequence
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:609)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:02:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:02:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+17:02:40 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+17:04:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:04:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+17:04:09 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+17:08:50 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:13:10 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+17:13:12 INFO  : XSDB server has started successfully.
+17:13:13 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+17:13:14 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+17:13:48 INFO  : Processor reset is completed for microblaze_0
+17:14:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:14:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+17:14:12 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+17:14:16 INFO  : Processor reset is completed for microblaze_0
+17:16:02 INFO  : Processor reset is completed for microblaze_0
+17:17:27 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:17:28 INFO  : Processor reset is completed for microblaze_0
+17:18:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:18:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+17:18:51 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+17:18:58 INFO  : Processor reset is completed for microblaze_0
+17:20:52 INFO  : Processor reset is completed for microblaze_0
+17:22:16 INFO  : Processor reset is completed for microblaze_0
+17:22:42 INFO  : Processor reset is completed for microblaze_0
+17:23:09 INFO  : Processor reset is completed for microblaze_0
+17:23:49 INFO  : Processor reset is completed for microblaze_0
+17:35:17 INFO  : Processor reset is completed for microblaze_0
+17:35:35 INFO  : Processor reset is completed for microblaze_0
+17:39:33 INFO  : Processor reset is completed for microblaze_0
+17:41:08 INFO  : Processor reset is completed for microblaze_0
+17:43:11 INFO  : Processor reset is completed for microblaze_0
+17:51:38 INFO  : Processor reset is completed for microblaze_0
+17:57:36 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:57:38 INFO  : Processor reset is completed for microblaze_0
+18:06:34 INFO  : Processor reset is completed for microblaze_0
+18:07:40 INFO  : Processor reset is completed for microblaze_0
+18:20:03 INFO  : Processor reset is completed for microblaze_0
+18:29:48 INFO  : Processor reset is completed for microblaze_0
+18:39:37 INFO  : Processor reset is completed for microblaze_0
+18:47:27 INFO  : Processor reset is completed for microblaze_0
+11:26:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:26:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+11:26:52 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+11:27:16 INFO  : Processor reset is completed for microblaze_0
+11:29:32 INFO  : Processor reset is completed for microblaze_0
+11:30:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:30:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+11:30:46 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+11:36:43 INFO  : Processor reset is completed for microblaze_0
+11:38:24 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Basys3-210183AB39D3A on TCP:127.0.0.1:3121
+
+
+11:38:24 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Basys3-210183AB39D3A on TCP:127.0.0.1:3121
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:372)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:381)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:290)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+11:38:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:38:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+11:38:50 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+11:46:20 INFO  : Processor reset is completed for microblaze_0
+11:46:33 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+11:46:33 WARN  : Terminating existing sessions on processor microblaze_0
+11:47:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:47:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+11:47:07 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+11:47:24 INFO  : Processor reset is completed for microblaze_0
+11:47:26 ERROR : Port COM4 is already in use.
+11:48:35 INFO  : Processor reset is completed for microblaze_0
+11:57:14 INFO  : Processor reset is completed for microblaze_0
+11:57:16 ERROR : Port COM4 is already in use.
+12:01:48 INFO  : Processor reset is completed for microblaze_0
+12:05:48 INFO  : Processor reset is completed for microblaze_0
+12:05:50 ERROR : Port COM4 is already in use.
+12:10:56 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:10:57 INFO  : Processor reset is completed for microblaze_0
+12:13:00 INFO  : Processor reset is completed for microblaze_0
+12:13:02 ERROR : Port COM4 is already in use.
+12:14:06 INFO  : Processor reset is completed for microblaze_0
+12:22:35 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:22:36 INFO  : Processor reset is completed for microblaze_0
+12:22:38 ERROR : Port COM4 is already in use.
+12:24:41 INFO  : Processor reset is completed for microblaze_0
+12:52:34 INFO  : Processor reset is completed for microblaze_0
+12:52:36 ERROR : Port COM4 is already in use.
+12:55:20 INFO  : Processor reset is completed for microblaze_0
+13:00:57 INFO  : Processor reset is completed for microblaze_0
+13:00:59 ERROR : Port COM4 is already in use.
+13:03:05 INFO  : Processor reset is completed for microblaze_0
+13:11:59 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:12:00 INFO  : Processor reset is completed for microblaze_0
+13:12:02 ERROR : Port COM4 is already in use.
+13:13:06 INFO  : Processor reset is completed for microblaze_0
+13:14:20 INFO  : Processor reset is completed for microblaze_0
+13:14:22 ERROR : Port COM4 is already in use.
+13:14:22 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor State is "Running"
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:609)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+13:14:34 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+13:16:57 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+13:16:59 INFO  : XSDB server has started successfully.
+13:16:59 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+13:17:01 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+13:17:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:17:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+13:17:27 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+13:18:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:18:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+13:18:28 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+13:18:33 INFO  : Processor reset is completed for microblaze_0
+13:19:32 INFO  : Processor reset is completed for microblaze_0
+13:20:29 INFO  : Processor reset is completed for microblaze_0
+13:20:35 INFO  : Processor reset is completed for microblaze_0
+13:23:43 INFO  : Processor reset is completed for microblaze_0
+14:03:44 INFO  : Processor reset is completed for microblaze_0
+14:04:11 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:04:12 INFO  : Processor reset is completed for microblaze_0
+14:07:13 INFO  : Processor reset is completed for microblaze_0
+14:09:06 INFO  : Processor reset is completed for microblaze_0
+14:17:14 INFO  : Processor reset is completed for microblaze_0
+14:19:07 INFO  : Processor reset is completed for microblaze_0
+14:19:49 INFO  : Processor reset is completed for microblaze_0
+14:32:43 INFO  : Processor reset is completed for microblaze_0
+14:35:01 INFO  : Processor reset is completed for microblaze_0
+14:37:23 INFO  : Processor reset is completed for microblaze_0
+14:38:57 INFO  : Processor reset is completed for microblaze_0
+14:44:13 INFO  : Processor reset is completed for microblaze_0
+14:46:23 INFO  : Processor reset is completed for microblaze_0
+14:46:25 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:46:26 INFO  : Processor reset is completed for microblaze_0
+14:50:32 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:50:34 INFO  : Processor reset is completed for microblaze_0
+14:52:34 INFO  : Processor reset is completed for microblaze_0
+14:53:39 INFO  : Processor reset is completed for microblaze_0
+14:54:22 INFO  : Processor reset is completed for microblaze_0
+14:55:37 INFO  : Processor reset is completed for microblaze_0
+14:56:57 INFO  : Processor reset is completed for microblaze_0
+14:58:05 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(TM.java:481)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:423)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:588)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+14:58:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:58:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+14:58:23 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+15:00:33 INFO  : Processor reset is completed for microblaze_0
+15:05:09 INFO  : Processor reset is completed for microblaze_0
+15:09:14 INFO  : Processor reset is completed for microblaze_0
+15:20:13 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(TM.java:481)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:423)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:588)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+15:20:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:20:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+15:20:32 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+15:22:21 INFO  : Processor reset is completed for microblaze_0
+15:23:00 INFO  : Processor reset is completed for microblaze_0
+15:24:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:24:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+15:24:12 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+15:28:40 INFO  : Processor reset is completed for microblaze_0
+15:30:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:30:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+15:30:23 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+15:30:25 INFO  : Processor reset is completed for microblaze_0
+15:31:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:31:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+15:31:55 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+15:36:57 INFO  : Processor reset is completed for microblaze_0
+15:38:52 INFO  : Processor reset is completed for microblaze_0
+15:45:24 INFO  : Processor reset is completed for microblaze_0
+15:49:40 INFO  : Processor reset is completed for microblaze_0
+15:50:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:50:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+15:50:50 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+15:50:54 INFO  : Processor reset is completed for microblaze_0
+15:52:04 INFO  : Processor reset is completed for microblaze_0
+15:53:37 INFO  : Processor reset is completed for microblaze_0
+15:55:34 INFO  : Processor reset is completed for microblaze_0
+15:56:45 INFO  : Processor reset is completed for microblaze_0
+15:57:34 INFO  : Processor reset is completed for microblaze_0
+15:59:07 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:59:09 INFO  : Processor reset is completed for microblaze_0
+16:03:23 INFO  : Processor reset is completed for microblaze_0
+16:17:41 INFO  : Processor reset is completed for microblaze_0
+16:19:07 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:19:09 INFO  : Processor reset is completed for microblaze_0
+16:20:29 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:20:30 INFO  : Processor reset is completed for microblaze_0
+16:26:02 INFO  : Processor reset is completed for microblaze_0
+16:58:59 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:59:04 INFO  : Processor reset is completed for microblaze_0
+17:01:21 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:01:22 INFO  : Processor reset is completed for microblaze_0
+22:30:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:30:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+22:30:22 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+22:36:54 INFO  : Processor reset is completed for microblaze_0
+00:21:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:21:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+00:21:15 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+00:21:21 INFO  : Processor reset is completed for microblaze_0
+01:04:58 INFO  : Processor reset is completed for microblaze_0
+01:42:39 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+01:42:43 INFO  : Processor reset is completed for microblaze_0
+02:44:51 INFO  : Processor reset is completed for microblaze_0
+02:45:44 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:18:25 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+11:18:27 INFO  : XSDB server has started successfully.
+11:18:28 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+11:18:29 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+11:19:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:19:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+11:19:12 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+11:19:24 INFO  : Processor reset is completed for microblaze_0
+11:49:05 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:00:02 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+12:00:05 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+12:00:05 INFO  : XSDB server has started successfully.
+19:31:42 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+19:31:45 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+19:31:47 INFO  : XSDB server has started successfully.
+19:52:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:52:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+19:52:37 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+19:53:08 INFO  : Processor reset is completed for microblaze_0
+09:56:50 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+09:56:53 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+09:56:56 INFO  : Checking for hwspec changes in the project top_hw_platform_2.
+09:56:56 INFO  : XSDB server has started successfully.
+09:58:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:58:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+09:58:11 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+09:58:19 INFO  : Processor reset is completed for microblaze_0
+10:01:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:01:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+10:01:40 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+10:01:48 INFO  : Processor reset is completed for microblaze_0
+10:03:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:03:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+10:03:01 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+10:03:04 INFO  : Processor reset is completed for microblaze_0
+10:04:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:04:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+10:04:19 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+10:04:21 INFO  : Processor reset is completed for microblaze_0
+10:04:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:04:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+10:04:52 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+10:04:55 INFO  : Processor reset is completed for microblaze_0
+10:05:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:05:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+10:05:22 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+10:05:34 INFO  : Processor reset is completed for microblaze_0
+13:13:46 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:08:51 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+18:08:53 INFO  : XSDB server has started successfully.
+18:08:54 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+18:08:55 INFO  : Checking for hwspec changes in the project top_hw_platform_2.
+18:09:52 WARN  : Unable to obtain port 2350 for use by XMD, java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+18:09:54 INFO  : Processor reset is completed for microblaze_0
+18:10:37 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:03:00 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+19:03:02 INFO  : XSDB server has started successfully.
+19:03:03 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+19:03:05 INFO  : Checking for hwspec changes in the project top_hw_platform_2.
+19:03:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:03:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+19:03:36 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+19:03:43 INFO  : Processor reset is completed for microblaze_0
+19:03:44 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Cannot perform the Debug Command
+
+    Failed to lock the JTAG Cable for exclusive access
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:609)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+19:04:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:04:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+19:04:22 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+19:04:29 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:09:07 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+19:09:08 INFO  : XSDB server has started successfully.
+19:09:09 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+19:09:10 INFO  : Checking for hwspec changes in the project top_hw_platform_2.
+19:09:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:09:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+19:09:35 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+19:09:41 INFO  : Processor reset is completed for microblaze_0
+19:10:39 ERROR :  [Hsi 55-1433] Error boost::filesystem::copy_file: The system cannot find the path specified: "F:/Xilinx2/SDK/2015.2/data\embeddedsw\lib\bsp\standalone_v5_1/src\microblaze\microblaze_invalidate_cache_ext_range.S", "F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Calculator_codes\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\ScCalculator_bsp\microblaze_0/libsrc/standalone_v5_1/src\microblaze\microblaze_invalidate_cache_ext_range.S"
+F:/Xilinx2/SDK/2015.2/gnu/microblaze/nt
+19:11:55 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:11:57 INFO  : Processor reset is completed for microblaze_0
+19:34:30 INFO  : Processor reset is completed for microblaze_0
+19:34:50 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:34:51 INFO  : Processor reset is completed for microblaze_0
+19:37:14 INFO  : Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup
+19:37:14 ERROR : Timeout occured while waiting to get reply for command "xstop 0"
+19:45:40 INFO  : Processor reset is completed for microblaze_0
+19:46:38 INFO  : Processor reset is completed for microblaze_0
+19:47:40 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:47:40 INFO  : Processor reset is completed for microblaze_0
+19:48:04 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:48:05 INFO  : Processor reset is completed for microblaze_0
+19:48:18 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:48:20 INFO  : Processor reset is completed for microblaze_0
+20:18:03 INFO  : Processor reset is completed for microblaze_0
+20:20:48 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:20:50 INFO  : Processor reset is completed for microblaze_0
+20:21:56 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:21:57 INFO  : Processor reset is completed for microblaze_0
+20:41:20 INFO  : Processor reset is completed for microblaze_0
+20:41:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:41:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+20:41:53 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+20:49:54 INFO  : Processor reset is completed for microblaze_0
+21:02:40 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:02:42 INFO  : Processor reset is completed for microblaze_0
+21:07:19 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:07:20 INFO  : Processor reset is completed for microblaze_0
+21:08:33 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:08:35 INFO  : Processor reset is completed for microblaze_0
+21:09:03 INFO  : Processor reset is completed for microblaze_0
+21:09:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:09:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+21:09:47 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+21:10:57 INFO  : Processor reset is completed for microblaze_0
+21:16:08 INFO  : Processor reset is completed for microblaze_0
+21:18:04 INFO  : Processor reset is completed for microblaze_0
+21:19:28 INFO  : Processor reset is completed for microblaze_0
+21:21:56 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:21:57 INFO  : Processor reset is completed for microblaze_0
+21:24:24 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:24:31 INFO  : Processor reset is completed for microblaze_0
+21:41:25 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(TM.java:481)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:423)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:588)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+21:41:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:41:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+21:41:41 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+21:45:45 INFO  : Processor reset is completed for microblaze_0
+00:26:27 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+14:01:52 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+14:01:55 INFO  : XSDB server has started successfully.
+14:01:56 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+14:01:57 INFO  : Checking for hwspec changes in the project top_hw_platform_2.
+14:18:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:18:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+14:18:37 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+14:18:50 INFO  : Processor reset is completed for microblaze_0
+14:20:19 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:20:20 INFO  : Processor reset is completed for microblaze_0
+14:22:53 INFO  : Processor reset is completed for microblaze_0
+14:23:03 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:23:04 INFO  : Processor reset is completed for microblaze_0
+14:23:55 INFO  : Processor reset is completed for microblaze_0
+14:24:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:24:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+14:24:30 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+15:06:40 INFO  : Processor reset is completed for microblaze_0
+15:07:57 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:07:58 INFO  : Processor reset is completed for microblaze_0
+15:09:27 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:09:28 INFO  : Processor reset is completed for microblaze_0
+15:45:00 INFO  : Processor reset is completed for microblaze_0
+15:46:38 INFO  : Processor reset is completed for microblaze_0
+15:50:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:50:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+15:50:38 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+15:50:42 INFO  : Processor reset is completed for microblaze_0
+16:01:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:01:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+16:01:59 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+16:33:49 INFO  : Processor reset is completed for microblaze_0
+16:38:03 INFO  : Processor reset is completed for microblaze_0
+16:41:50 INFO  : Processor reset is completed for microblaze_0
+16:43:13 INFO  : Processor reset is completed for microblaze_0
+16:43:28 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:43:30 INFO  : Processor reset is completed for microblaze_0
+16:46:18 INFO  : Processor reset is completed for microblaze_0
+16:47:51 INFO  : Processor reset is completed for microblaze_0
+16:47:59 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:48:00 INFO  : Processor reset is completed for microblaze_0
+16:48:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:48:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+16:48:32 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+16:48:46 INFO  : Processor reset is completed for microblaze_0
+16:50:56 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(TM.java:481)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:423)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:588)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:51:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:51:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+16:51:15 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+16:51:19 INFO  : Processor reset is completed for microblaze_0
+16:54:51 INFO  : Processor reset is completed for microblaze_0
+16:55:17 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:55:18 INFO  : Processor reset is completed for microblaze_0
+17:14:48 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:14:50 INFO  : Processor reset is completed for microblaze_0
+17:15:14 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:15:16 INFO  : Processor reset is completed for microblaze_0
+17:33:20 INFO  : Processor reset is completed for microblaze_0
+17:33:54 INFO  : Processor reset is completed for microblaze_0
+17:35:21 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:35:22 INFO  : Processor reset is completed for microblaze_0
+17:43:51 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:43:52 INFO  : Processor reset is completed for microblaze_0
+19:04:44 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:26:27 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+12:26:31 INFO  : XSDB server has started successfully.
+12:26:31 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+12:26:32 INFO  : Checking for hwspec changes in the project top_hw_platform_2.
+12:45:26 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(TM.java:481)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:423)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:588)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+12:45:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:45:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+12:45:53 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+12:45:58 INFO  : Processor reset is completed for microblaze_0
+12:46:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:46:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+12:46:43 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+12:47:11 INFO  : Processor reset is completed for microblaze_0
+12:48:19 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:48:21 INFO  : Processor reset is completed for microblaze_0
+12:53:46 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:53:47 INFO  : Processor reset is completed for microblaze_0
+12:58:21 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:58:23 INFO  : Processor reset is completed for microblaze_0
+16:20:03 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:20:06 INFO  : Processor reset is completed for microblaze_0
+16:29:35 INFO  : Processor reset is completed for microblaze_0
+16:40:08 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:40:09 INFO  : Processor reset is completed for microblaze_0
+16:41:08 INFO  : Processor reset is completed for microblaze_0
+16:46:07 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:46:08 INFO  : Processor reset is completed for microblaze_0
+16:50:59 INFO  : Processor reset is completed for microblaze_0
+16:52:11 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:52:12 INFO  : Processor reset is completed for microblaze_0
+16:53:11 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:53:13 INFO  : Processor reset is completed for microblaze_0
+17:02:16 INFO  : Processor reset is completed for microblaze_0
+17:04:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:04:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+17:04:45 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+17:04:57 INFO  : Processor reset is completed for microblaze_0
+17:14:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:14:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+17:14:01 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+17:26:56 INFO  : Processor reset is completed for microblaze_0
+17:27:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:27:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+17:27:33 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+17:27:41 INFO  : Processor reset is completed for microblaze_0
+17:27:48 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:27:49 INFO  : Processor reset is completed for microblaze_0
+17:28:37 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:28:38 INFO  : Processor reset is completed for microblaze_0
+17:29:48 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:29:49 INFO  : Processor reset is completed for microblaze_0
+17:30:33 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:30:34 INFO  : Processor reset is completed for microblaze_0
+17:40:19 INFO  : Processor reset is completed for microblaze_0
+17:43:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:43:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+17:43:47 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+18:07:16 INFO  : Processor reset is completed for microblaze_0
+18:09:53 INFO  : Processor reset is completed for microblaze_0
+18:12:00 INFO  : Processor reset is completed for microblaze_0
+18:12:07 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:12:08 INFO  : Processor reset is completed for microblaze_0
+18:12:36 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:12:37 INFO  : Processor reset is completed for microblaze_0
+18:13:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:13:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+18:13:10 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+18:13:43 INFO  : Processor reset is completed for microblaze_0
+18:14:34 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:14:36 INFO  : Processor reset is completed for microblaze_0
+18:15:48 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:15:49 INFO  : Processor reset is completed for microblaze_0
+18:17:23 INFO  : Processor reset is completed for microblaze_0
+18:18:24 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:18:25 INFO  : Processor reset is completed for microblaze_0
+18:19:03 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:19:05 INFO  : Processor reset is completed for microblaze_0
+18:21:25 INFO  : Processor reset is completed for microblaze_0
+18:24:42 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:24:43 INFO  : Processor reset is completed for microblaze_0
+18:27:54 INFO  : Processor reset is completed for microblaze_0
+18:34:55 INFO  : Processor reset is completed for microblaze_0
+18:58:02 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:58:05 INFO  : Processor reset is completed for microblaze_0
+19:42:22 INFO  : Processor reset is completed for microblaze_0
+19:42:23 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor State is "Running"
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:609)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+19:42:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:42:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+19:42:45 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+19:42:57 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+22:16:23 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+22:16:25 INFO  : XSDB server has started successfully.
+22:16:27 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+22:16:28 INFO  : Checking for hwspec changes in the project top_hw_platform_2.
+23:17:17 INFO  : Processor reset is completed for microblaze_0
+23:22:17 INFO  : Processor reset is completed for microblaze_0
+23:24:57 INFO  : Processor reset is completed for microblaze_0
+00:09:31 INFO  : Processor reset is completed for microblaze_0
+00:11:29 INFO  : Processor reset is completed for microblaze_0
+00:11:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:11:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+00:11:57 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+00:15:44 INFO  : Processor reset is completed for microblaze_0
+00:18:45 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:18:46 INFO  : Processor reset is completed for microblaze_0
+00:26:13 INFO  : Processor reset is completed for microblaze_0
+01:43:28 INFO  : Processor reset is completed for microblaze_0
+01:47:25 INFO  : Processor reset is completed for microblaze_0
+01:49:38 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+13:57:19 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+13:57:20 INFO  : XSDB server has started successfully.
+13:57:22 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+13:57:23 INFO  : Checking for hwspec changes in the project top_hw_platform_2.
+14:15:00 INFO  : Processor reset is completed for microblaze_0
+14:17:24 INFO  : Processor reset is completed for microblaze_0
+15:01:22 INFO  : Processor reset is completed for microblaze_0
+15:03:42 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:03:47 INFO  : Processor reset is completed for microblaze_0
+15:09:19 INFO  : Processor reset is completed for microblaze_0
+15:11:46 INFO  : Processor reset is completed for microblaze_0
+15:17:09 INFO  : Processor reset is completed for microblaze_0
+15:46:54 INFO  : Processor reset is completed for microblaze_0
+15:51:07 INFO  : Processor reset is completed for microblaze_0
+15:53:02 INFO  : Processor reset is completed for microblaze_0
+16:01:44 INFO  : Processor reset is completed for microblaze_0
+16:05:34 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:05:35 INFO  : Processor reset is completed for microblaze_0
+16:07:04 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:07:05 INFO  : Processor reset is completed for microblaze_0
+16:07:38 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:07:43 INFO  : Processor reset is completed for microblaze_0
+16:24:27 INFO  : Processor reset is completed for microblaze_0
+16:27:41 INFO  : Processor reset is completed for microblaze_0
+16:33:13 INFO  : Processor reset is completed for microblaze_0
+16:35:10 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:35:11 INFO  : Processor reset is completed for microblaze_0
+16:50:50 INFO  : Processor reset is completed for microblaze_0
+16:57:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:57:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+16:57:22 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+17:05:44 INFO  : Processor reset is completed for microblaze_0
+17:27:41 INFO  : Processor reset is completed for microblaze_0
+18:29:33 INFO  : Processor reset is completed for microblaze_0
+18:30:47 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:30:49 INFO  : Processor reset is completed for microblaze_0
+18:33:07 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:33:08 INFO  : Processor reset is completed for microblaze_0
+19:24:55 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(TM.java:481)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:423)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:588)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+19:25:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:25:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+19:25:14 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+19:25:18 INFO  : Processor reset is completed for microblaze_0
+22:41:32 INFO  : Processor reset is completed for microblaze_0
+22:55:14 INFO  : Processor reset is completed for microblaze_0
+22:59:46 INFO  : Processor reset is completed for microblaze_0
+23:02:45 INFO  : Processor reset is completed for microblaze_0
+23:03:06 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:03:07 INFO  : Processor reset is completed for microblaze_0
+23:05:40 INFO  : Processor reset is completed for microblaze_0
+23:17:25 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:17:27 INFO  : Processor reset is completed for microblaze_0
+23:20:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:20:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+23:20:14 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+23:46:34 INFO  : Processor reset is completed for microblaze_0
+23:48:16 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:48:17 INFO  : Processor reset is completed for microblaze_0
+23:52:07 INFO  : Processor reset is completed for microblaze_0
+23:54:27 INFO  : Processor reset is completed for microblaze_0
+23:55:23 INFO  : Processor reset is completed for microblaze_0
+00:09:34 INFO  : Processor reset is completed for microblaze_0
+00:20:05 INFO  : Processor reset is completed for microblaze_0
+00:22:22 INFO  : Processor reset is completed for microblaze_0
+00:23:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:23:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+00:23:16 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+00:23:21 INFO  : Processor reset is completed for microblaze_0
+00:23:41 INFO  : Processor reset is completed for microblaze_0
+00:29:18 INFO  : Processor reset is completed for microblaze_0
+00:38:58 INFO  : Processor reset is completed for microblaze_0
+00:45:07 INFO  : Processor reset is completed for microblaze_0
+00:52:18 INFO  : Processor reset is completed for microblaze_0
+00:52:39 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:52:41 INFO  : Processor reset is completed for microblaze_0
+00:56:05 INFO  : Processor reset is completed for microblaze_0
+00:57:44 INFO  : Processor reset is completed for microblaze_0
+00:59:48 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:59:50 INFO  : Processor reset is completed for microblaze_0
+01:00:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:00:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+01:00:59 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+01:01:03 INFO  : Processor reset is completed for microblaze_0
+01:03:02 INFO  : Processor reset is completed for microblaze_0
+01:22:17 INFO  : Processor reset is completed for microblaze_0
+01:23:16 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+01:23:17 INFO  : Processor reset is completed for microblaze_0
+01:25:33 INFO  : Processor reset is completed for microblaze_0
+01:34:22 INFO  : Processor reset is completed for microblaze_0
+01:37:25 INFO  : Processor reset is completed for microblaze_0
+02:06:30 INFO  : Processor reset is completed for microblaze_0
+02:06:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:06:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+02:06:57 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+02:07:14 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+02:07:15 INFO  : Processor reset is completed for microblaze_0
+02:07:54 INFO  : Processor reset is completed for microblaze_0
+02:08:26 INFO  : Processor reset is completed for microblaze_0
+02:51:12 INFO  : Processor reset is completed for microblaze_0
+02:57:33 INFO  : Processor reset is completed for microblaze_0
+02:58:02 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+02:58:04 INFO  : Processor reset is completed for microblaze_0
+03:00:26 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+03:00:27 INFO  : Processor reset is completed for microblaze_0
+03:03:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:03:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+03:03:15 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+03:03:18 INFO  : Processor reset is completed for microblaze_0
+03:12:31 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+03:13:41 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+03:13:43 INFO  : XSDB server has started successfully.
+03:13:45 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+03:13:46 INFO  : Checking for hwspec changes in the project top_hw_platform_2.
+03:14:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:14:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+03:14:24 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+03:14:28 INFO  : Processor reset is completed for microblaze_0
+03:19:02 INFO  : Processor reset is completed for microblaze_0
+03:19:21 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+03:19:34 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+03:19:35 INFO  : Processor reset is completed for microblaze_0
+03:20:02 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:38:05 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+12:38:08 INFO  : XSDB server has started successfully.
+12:38:12 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+12:38:14 INFO  : Checking for hwspec changes in the project top_hw_platform_2.
+12:39:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:39:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+12:39:36 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+12:39:44 INFO  : Processor reset is completed for microblaze_0
+12:39:55 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:39:57 INFO  : Processor reset is completed for microblaze_0
+12:42:46 INFO  : Processor reset is completed for microblaze_0
+12:49:27 INFO  : Processor reset is completed for microblaze_0
+12:55:33 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:55:35 INFO  : Processor reset is completed for microblaze_0
+13:02:59 INFO  : Processor reset is completed for microblaze_0
+13:03:24 INFO  : Processor reset is completed for microblaze_0
+13:04:56 INFO  : Processor reset is completed for microblaze_0
+13:27:45 INFO  : Processor reset is completed for microblaze_0
+14:24:23 INFO  : Processor reset is completed for microblaze_0
+14:24:41 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:24:46 INFO  : Processor reset is completed for microblaze_0
+14:27:56 INFO  : Processor reset is completed for microblaze_0
+14:31:56 INFO  : Processor reset is completed for microblaze_0
+14:35:35 INFO  : Processor reset is completed for microblaze_0
+14:37:33 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:37:34 INFO  : Processor reset is completed for microblaze_0
+14:41:55 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:41:57 INFO  : Processor reset is completed for microblaze_0
+14:53:59 INFO  : Processor reset is completed for microblaze_0
+14:56:16 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:56:21 INFO  : Processor reset is completed for microblaze_0
+15:01:51 INFO  : Processor reset is completed for microblaze_0
+15:02:42 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:02:43 INFO  : Processor reset is completed for microblaze_0
+15:14:36 INFO  : Processor reset is completed for microblaze_0
+15:18:21 INFO  : Processor reset is completed for microblaze_0
+15:22:24 INFO  : Processor reset is completed for microblaze_0
+15:26:44 INFO  : Processor reset is completed for microblaze_0
+15:27:48 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:27:50 INFO  : Processor reset is completed for microblaze_0
+15:28:32 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:28:35 INFO  : Processor reset is completed for microblaze_0
+15:30:55 INFO  : Processor reset is completed for microblaze_0
+15:31:00 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:31:01 INFO  : Processor reset is completed for microblaze_0
+15:33:06 INFO  : Processor reset is completed for microblaze_0
+15:34:19 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:34:20 INFO  : Processor reset is completed for microblaze_0
+16:54:54 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:55:08 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+16:55:11 INFO  : XSDB server has started successfully.
+16:55:12 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+16:55:13 INFO  : Checking for hwspec changes in the project top_hw_platform_2.
+19:15:40 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+19:15:41 INFO  : XSDB server has started successfully.
+19:15:43 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+19:15:45 INFO  : Checking for hwspec changes in the project top_hw_platform_2.
+19:27:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:27:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+19:27:04 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+19:27:10 INFO  : Processor reset is completed for microblaze_0
+19:28:58 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:28:59 INFO  : Processor reset is completed for microblaze_0
+20:11:14 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:11:15 INFO  : Processor reset is completed for microblaze_0
+20:25:53 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:25:54 INFO  : Processor reset is completed for microblaze_0
+22:48:22 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:48:24 INFO  : Processor reset is completed for microblaze_0
+22:48:46 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:48:47 INFO  : Processor reset is completed for microblaze_0
+22:50:29 INFO  : Processor reset is completed for microblaze_0
+22:51:25 INFO  : Processor reset is completed for microblaze_0
+22:52:28 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:52:32 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:52:33 INFO  : Processor reset is completed for microblaze_0
+22:53:26 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:53:27 INFO  : Processor reset is completed for microblaze_0
+22:54:51 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:55:00 INFO  : Processor reset is completed for microblaze_0
+23:09:09 INFO  : Processor reset is completed for microblaze_0
+23:23:37 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(TM.java:481)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:423)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:588)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+23:23:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:23:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+23:23:55 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+23:24:41 INFO  : Processor reset is completed for microblaze_0
+23:38:23 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:38:30 INFO  : Processor reset is completed for microblaze_0
+23:39:26 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:39:27 INFO  : Processor reset is completed for microblaze_0
+23:42:58 INFO  : Processor reset is completed for microblaze_0
+23:43:46 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:43:47 INFO  : Processor reset is completed for microblaze_0
+23:44:40 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:44:43 INFO  : Processor reset is completed for microblaze_0
+23:45:30 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:45:32 INFO  : Processor reset is completed for microblaze_0
+00:26:47 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:16:37 INFO  : Launching XSDB server: xsdb.bat -s F:/Xilinx2/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+16:16:44 INFO  : XSDB server has started successfully.
+16:16:44 INFO  : Processing command line option -hwspec F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top.hdf.
+16:16:46 INFO  : Checking for hwspec changes in the project top_hw_platform_2.
+16:30:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:30:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+16:30:10 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+16:30:22 INFO  : Processor reset is completed for microblaze_0
+16:32:28 INFO  : Processor reset is completed for microblaze_0
+16:33:32 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:33:34 INFO  : Processor reset is completed for microblaze_0
+16:38:05 INFO  : Processor reset is completed for microblaze_0
+16:48:02 INFO  : Processor reset is completed for microblaze_0
+16:49:12 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:49:20 INFO  : Processor reset is completed for microblaze_0
+16:59:09 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:59:12 INFO  : Processor reset is completed for microblaze_0
+17:52:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:52:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+17:52:31 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+17:52:37 INFO  : Processor reset is completed for microblaze_0
+17:57:09 INFO  : Processor reset is completed for microblaze_0
+18:42:35 INFO  : Processor reset is completed for microblaze_0
+19:08:25 INFO  : Processor reset is completed for microblaze_0
+19:10:32 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:10:35 INFO  : Processor reset is completed for microblaze_0
+19:12:03 INFO  : Processor reset is completed for microblaze_0
+19:23:15 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:23:16 INFO  : Processor reset is completed for microblaze_0
+19:25:29 INFO  : Processor reset is completed for microblaze_0
+19:27:57 INFO  : Processor reset is completed for microblaze_0
+19:31:34 INFO  : Processor reset is completed for microblaze_0
+19:32:13 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:32:14 INFO  : Processor reset is completed for microblaze_0
+19:32:34 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:32:38 INFO  : Processor reset is completed for microblaze_0
+19:33:26 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:33:29 INFO  : Processor reset is completed for microblaze_0
+19:33:54 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:33:55 INFO  : Processor reset is completed for microblaze_0
+19:34:28 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:34:29 INFO  : Processor reset is completed for microblaze_0
+19:37:25 INFO  : Processor reset is completed for microblaze_0
+19:59:26 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:59:27 INFO  : Processor reset is completed for microblaze_0
+20:02:48 INFO  : Processor reset is completed for microblaze_0
+20:14:33 INFO  : Processor reset is completed for microblaze_0
+20:15:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:15:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB39D3A" && level==0} -index 0' command is executed.
+20:15:16 INFO  : FPGA configured successfully with bitstream "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Calculator_codes/es3_hw_assmnt_1/es3_hw_assmnt_1.sdk/top_hw_platform_0/download.bit"
+20:15:22 INFO  : Processor reset is completed for microblaze_0
+20:32:56 INFO  : Processor reset is completed for microblaze_0
+20:41:43 INFO  : Processor reset is completed for microblaze_0
+20:54:40 INFO  : Processor reset is completed for microblaze_0
+21:04:39 INFO  : Processor reset is completed for microblaze_0
+21:13:27 INFO  : Processor reset is completed for microblaze_0
+21:14:04 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:14:05 INFO  : Processor reset is completed for microblaze_0
+21:18:19 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:18:20 INFO  : Processor reset is completed for microblaze_0
+22:55:37 INFO  : Processor reset is completed for microblaze_0
+22:57:39 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:57:41 INFO  : Processor reset is completed for microblaze_0
+23:03:28 INFO  : Processor reset is completed for microblaze_0
+23:07:05 INFO  : Processor reset is completed for microblaze_0
+00:51:52 INFO  : Processor reset is completed for microblaze_0
+01:11:10 INFO  : Processor reset is completed for microblaze_0
+01:20:33 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+01:20:34 INFO  : Processor reset is completed for microblaze_0
+01:25:20 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+01:25:22 INFO  : Processor reset is completed for microblaze_0
+01:29:33 INFO  : Processor reset is completed for microblaze_0
+04:48:11 INFO  : Processor reset is completed for microblaze_0
+05:14:32 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

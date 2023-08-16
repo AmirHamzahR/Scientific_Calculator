@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Webtalk v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sat Oct 31 17:11:56 2020
+# Process ID: 21160
+# Log file: F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/webtalk.log
+# Journal file: F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1\webtalk.jou
+#-----------------------------------------------------------
+source F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_assmnt_1.hw/webtalk/labtool_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 2347458774 -regid "212037177_0_0_969" -xml F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/A..."
+    (file "F:/Amir_Hamzah/University_of_Edinburgh/Studies/2nd_year/Engineering_Software_3/Assessment_1_Calculator/Assessment_1_Calculator/es3_hw_assmnt_1/es3_hw_..." line 26)
+INFO: [Common 17-206] Exiting Webtalk at Sat Oct 31 17:11:57 2020...

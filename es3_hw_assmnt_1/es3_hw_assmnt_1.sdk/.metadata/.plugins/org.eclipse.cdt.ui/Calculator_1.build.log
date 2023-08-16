@@ -1,0 +1,99 @@
+13:46:07 **** Auto Build of configuration Debug for project Calculator_1 ****
+make all 
+'Building file: ../src/gpio_init.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gpio_init.o" -I../../Calculator_1_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/gpio_init.d" -MT"src/gpio_init.d" -o "src/gpio_init.o" "../src/gpio_init.c"
+'Finished building: ../src/gpio_init.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Calculator_1_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/operations.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/operations.o" -I../../Calculator_1_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/operations.d" -MT"src/operations.d" -o "src/operations.o" "../src/operations.c"
+'Finished building: ../src/operations.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Calculator_1_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/seg7_display.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/seg7_display.o" -I../../Calculator_1_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/seg7_display.d" -MT"src/seg7_display.d" -o "src/seg7_display.o" "../src/seg7_display.c"
+'Finished building: ../src/seg7_display.c'
+' '
+'Building file: ../src/timer_interrupt_func.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_interrupt_func.o" -I../../Calculator_1_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/timer_interrupt_func.d" -MT"src/timer_interrupt_func.d" -o "src/timer_interrupt_func.o" "../src/timer_interrupt_func.c"
+'Finished building: ../src/timer_interrupt_func.c'
+' '
+'Building file: ../src/xinterruptES3.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xinterruptES3.o" -I../../Calculator_1_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/xinterruptES3.d" -MT"src/xinterruptES3.d" -o "src/xinterruptES3.o" "../src/xinterruptES3.c"
+'Finished building: ../src/xinterruptES3.c'
+' '
+'Building target: Calculator_1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Calculator_1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "Calculator_1.elf"  ./src/gpio_init.o ./src/main.o ./src/operations.o ./src/platform.o ./src/seg7_display.o ./src/timer_interrupt_func.o ./src/xinterruptES3.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/gpio_init.o: In function `initGpio':
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/gpio_init.c:12: undefined reference to `XGpio_Initialize'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/gpio_init.c:18: undefined reference to `XGpio_Initialize'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/gpio_init.c:24: undefined reference to `XGpio_Initialize'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/gpio_init.c:30: undefined reference to `XGpio_Initialize'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/gpio_init.c:36: undefined reference to `XGpio_Initialize'
+./src/gpio_init.o:F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/gpio_init.c:42: more undefined references to `XGpio_Initialize' follow
+./src/main.o: In function `main':
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/main.c:48: undefined reference to `XGpio_DiscreteRead'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/main.c:51: undefined reference to `XGpio_DiscreteRead'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/main.c:52: undefined reference to `XGpio_DiscreteRead'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/main.c:53: undefined reference to `XGpio_DiscreteRead'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/main.c:54: undefined reference to `XGpio_DiscreteRead'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/main.c:56: undefined reference to `XGpio_DiscreteWrite'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/main.c:68: undefined reference to `XGpio_DiscreteRead'
+./src/operations.o: In function `update_Gpio':
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/operations.c:32: undefined reference to `XGpio_DiscreteRead'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/operations.c:34: undefined reference to `XGpio_DiscreteRead'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/operations.c:36: undefined reference to `XGpio_DiscreteRead'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/operations.c:38: undefined reference to `XGpio_DiscreteRead'
+./src/operations.o:F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/operations.c:40: more undefined references to `XGpio_DiscreteRead' follow
+./src/platform.o: In function `enable_caches':
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/platform.c:58: undefined reference to `microblaze_enable_icache'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/platform.c:61: undefined reference to `microblaze_enable_dcache'
+./src/platform.o: In function `disable_caches':
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/platform.c:69: undefined reference to `Xil_DCacheDisable'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/platform.c:70: undefined reference to `Xil_ICacheDisable'
+./src/seg7_display.o: In function `displayDigit':
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/seg7_display.c:123: undefined reference to `XGpio_DiscreteWrite'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/seg7_display.c:126: undefined reference to `XGpio_DiscreteWrite'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/seg7_display.c:129: undefined reference to `XGpio_DiscreteWrite'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/seg7_display.c:132: undefined reference to `XGpio_DiscreteWrite'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/seg7_display.c:135: undefined reference to `XGpio_DiscreteWrite'
+./src/seg7_display.o:F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/seg7_display.c:138: more undefined references to `XGpio_DiscreteWrite' follow
+./src/xinterruptES3.o: In function `setUpInterruptSystem':
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/xinterruptES3.c:136: undefined reference to `XIntc_Initialize'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/xinterruptES3.c:146: undefined reference to `XIntc_SelfTest'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/xinterruptES3.c:156: undefined reference to `XIntc_Connect'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/xinterruptES3.c:170: undefined reference to `XIntc_Start'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/xinterruptES3.c:180: undefined reference to `XIntc_Enable'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/xinterruptES3.c:185: undefined reference to `Xil_ExceptionInit'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/xinterruptES3.c:190: undefined reference to `XIntc_InterruptHandler'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/xinterruptES3.c:190: undefined reference to `Xil_ExceptionRegisterHandler'
+F:\Amir_Hamzah\University_of_Edinburgh\Studies\2nd_year\Engineering_Software_3\Assessment_1_Calculator\Assessment_1_Calculator\es3_hw_assmnt_1\es3_hw_assmnt_1.sdk\Calculator_1\Debug/../src/xinterruptES3.c:197: undefined reference to `Xil_ExceptionEnable'
+f:/xilinx2/sdk/2015.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.9.2/../../../../microblaze-xilinx-elf/lib/le\libxil.a(print.o): In function `print':
+(.text+0x20): undefined reference to `outbyte'
+f:/xilinx2/sdk/2015.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.9.2/../../../../microblaze-xilinx-elf/lib/le\libxil.a(read.o): In function `read':
+(.text+0x24): undefined reference to `inbyte'
+f:/xilinx2/sdk/2015.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.9.2/../../../../microblaze-xilinx-elf/lib/le\libxil.a(write.o): In function `write':
+(.text+0x2c): undefined reference to `outbyte'
+f:/xilinx2/sdk/2015.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.9.2/../../../../microblaze-xilinx-elf/lib/le\libxil.a(write.o): In function `write':
+(.text+0x54): undefined reference to `outbyte'
+f:/xilinx2/sdk/2015.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.9.2/../../../../microblaze-xilinx-elf/lib/le\libxil.a(write.o): In function `write':
+(.text+0x68): undefined reference to `outbyte'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Calculator_1.elf] Error 1
+
+13:46:10 Build Finished (took 2s.302ms)
+

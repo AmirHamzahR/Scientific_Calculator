@@ -1,0 +1,36 @@
+#ifndef OPERATIONS_H_
+#define OPERATIONS_H_
+
+/* INCLUSION OF HEADER FILES WHICH CONTAIN C DECLARATIONS AND MACRO DEFINITIONS */
+
+#include <math.h>
+#include <stdio.h>
+#include "xil_types.h"
+
+/* ---------------------------------------------------------------------------- */
+
+
+/* -------------------------FUNCTION DECLARATION------------------------------- */
+
+//declaration for arithmetic operations
+void adder(s32, s32);
+void subtractor(s32, s32);
+void multiplicator(s32, s32);
+void divider(s32, s32);
+
+void displayNumber(s16 a, u16 b);
+void calculation(u16, s32, s32);
+void repeated_op();
+
+
+/* ---------------------------------------------------------------------------- */
+
+/* -------------------------VARIABLE DECLARATION------------------------------- */
+
+s32 result = 0;
+
+u16 decide;	/*	This is a variable used to check which type of number is displayed	*/
+
+/* ---------------------------------------------------------------------------- */
+
+#endif /* OPERATIONS_H_ */
