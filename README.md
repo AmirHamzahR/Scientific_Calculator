@@ -1,3 +1,6 @@
+![Static Badge](https://img.shields.io/badge/University%20of%20Edinburgh%20-%20Engineering%20Software%203%20-%20%20blue)
+
+
 # Scientific Calculator (s1945267) Instructions for Xilinx FPGA
 Created a scientific calculator using C in VHDL incorporated with Xilinx Artix-7 FPGA for Engineering Software 3 course.
 
