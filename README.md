@@ -102,8 +102,6 @@ This guide provides an overview of the variables and flow used in the 6-bit comp
 - `value_detection()` uses pointers to call back values (`a`, `b`, `decideI`, & `decideR`) to `main.c`.
 - To view answers, turn off switches and press the right button. This uses a looped counter due to the `while(1)` function characteristic.
 
-> Note: For clarity regarding the flow of the `main.c`, refer to the flowchart provided separately.
-
 ## Other Program Files:
 
 
