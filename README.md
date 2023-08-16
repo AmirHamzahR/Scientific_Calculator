@@ -2,7 +2,7 @@
 Created a scientific calculator using C in VHDL incorporated with Xilinx Artix-7 FPGA for Engineering Software 3 course.
 
 ## Setup and Launch
----
+
 1. **Setup Vivado**:
    - Launch Vivado and open the **es3_hw_assignment_1** project.
      
@@ -25,7 +25,7 @@ Created a scientific calculator using C in VHDL incorporated with Xilinx Artix-7
    - Choose and run the **ScCalculator** program.
 
 ## Basic Operation of the Calculator
----
+
 ### Overview
 ![A picture of the FPGA](docs/FPGA.png)
 
@@ -48,12 +48,12 @@ Created a scientific calculator using C in VHDL incorporated with Xilinx Artix-7
   - To view the calculation result, turn off the switch and press while holding the right button. This will display both the real and imaginary values.
   - The center button serves as a reset function.
 
-# Scientific Calculator User's Guide
----
+# Programmer's Guide
+
 This guide provides an overview of the variables and flow used in the 6-bit complex number calculator. The codes can be found in this [folder](Calculator_codes/ScCalculator/src).
 
 ## Main Program File: `main.c`
----
+
 ### Header Files:
 
 - **gpio_init.h**: For GPIO initializations.
@@ -105,7 +105,7 @@ This guide provides an overview of the variables and flow used in the 6-bit comp
 > Note: For clarity regarding the flow of the `main.c`, refer to the flowchart provided separately.
 
 ## Other Program Files:
----
+
 
 ## calculations.h 
 This header file primarily serves as an interface for the associated [`calculations.c`](##calculations.c) file. Features:
@@ -153,5 +153,5 @@ Defines GPIO related variables:
 Handles the GPIO initializations based on [`gpio_init.h`](##gpio_init.h):
 - Successful initialization of GPIOs leads to their integration in the main program.
 
----
+
 
