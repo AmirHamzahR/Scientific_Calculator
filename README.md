@@ -157,5 +157,10 @@ Defines GPIO related variables:
 Handles the GPIO initializations based on [`gpio_init.h`](##gpio_init.h):
 - Successful initialization of GPIOs leads to their integration in the main program.
 
+# License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) and is open for any contributions.
+
+> All documents are referenced from the University of Edinburgh
 
 
