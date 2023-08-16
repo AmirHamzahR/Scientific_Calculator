@@ -3,7 +3,7 @@ Created a scientific calculator using C in VHDL incorporated with Xilinx Artix-7
 
 ## Setup and Launch
 
-1. Install the GitHub folder by using git clone command in the git command line
+1. **Install** the GitHub codes and folder by using git clone command in the git command line
 > git clone https://github.com/AmirHamzahR/Scientific_Calculator.git
 
 2. **Setup Vivado**:
